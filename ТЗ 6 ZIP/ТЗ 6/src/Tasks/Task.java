@@ -2,9 +2,9 @@ package Tasks;
 
 public class Task {
 
-    public int id;
-    public String title;
-    public String description;
+    public final int id;
+    public final String title;
+    public final String description;
     protected Status status;
 
     public Task(int id, String title, String description, Status status) {

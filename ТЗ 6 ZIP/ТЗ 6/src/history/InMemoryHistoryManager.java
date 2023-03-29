@@ -6,7 +6,7 @@ import history.InMemoryHistoryManager.CustomLinkedList.TaskNode;
 
 import java.util.*;
 
-public class    InMemoryHistoryManager implements HistoryManager {
+public class InMemoryHistoryManager implements HistoryManager {
 
     private final CustomLinkedList historyList = new CustomLinkedList();
     private final Map<Integer, TaskNode> taskIdsToNode = new HashMap<>();
@@ -29,7 +29,7 @@ public class    InMemoryHistoryManager implements HistoryManager {
 
     @Override
     public void remove(int id) {
-        TaskNode node = taskIdsToNode.get(id);
+        TaskNode node = taskIdsToNode.remove(id);
         if (node != null) historyList.removeNode(node);
     }
 
