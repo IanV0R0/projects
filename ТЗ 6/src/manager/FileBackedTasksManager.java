@@ -4,6 +4,8 @@ import Tasks.Epic;
 import Tasks.Status;
 import Tasks.Subtask;
 import Tasks.Task;
+import manager.exception.ManagerLoadFromFileException;
+import manager.exception.ManagerSaveException;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 
 public class FileBackedTasksManager extends InMemoryTaskManager {
 
+    private static final String LINE_SEPARATOR = "\r\n";
+
     private final String filePath;
 
     public FileBackedTasksManager(String filePath) {
@@ -26,7 +30,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
         try {
             FileBackedTasksManager manager = new FileBackedTasksManager(filePath);
             String content = Files.readString(Path.of(filePath));
-            String[] lines = content.split("\r\n");
+            String[] lines = content.split(LINE_SEPARATOR);
             Map<Integer, Task> taskIdToTask = new HashMap<>();
             for (int i = 0; i < lines.length - 2; i++) {
                 String[] fields = lines[i].split(",");
@@ -58,7 +62,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
 
             return manager;
         } catch (IOException e) {
-            throw new ManagerSaveException(e);
+            throw new ManagerLoadFromFileException(e);
         }
     }
 

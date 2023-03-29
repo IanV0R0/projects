@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Epic extends Task {
 
-    private Map<Integer, Subtask> subtaskMap = new HashMap<>();
+    private final Map<Integer, Subtask> subtaskMap = new HashMap<>();
 
     public Epic(int id, String title, String description) {
         super(id, title, description, Status.NEW);
