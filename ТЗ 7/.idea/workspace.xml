@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c7140da-b08d-425e-a621-886d0257f97f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Sprint3/m1-t12-code-style" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprint3/m1-t12-code-style" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sprint3/m1-t12-debug" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprint3/m1-t12-debug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sprint3/m1-t12-hotkeys" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprint3/m1-t12-hotkeys" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-kanban" beforeDir="false" afterPath="$PROJECT_DIR$/../java-kanban" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-sprint1-hw" beforeDir="false" afterPath="$PROJECT_DIR$/../java-sprint1-hw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1-t6-decoder" beforeDir="false" afterPath="$PROJECT_DIR$/../m1-t6-decoder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1-t6-jar" beforeDir="false" afterPath="$PROJECT_DIR$/../m1-t6-jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m1-t6-jdk" beforeDir="false" afterPath="$PROJECT_DIR$/../m1-t6-jdk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 5" beforeDir="false" afterPath="$PROJECT_DIR$/../ТЗ 5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Tasks/Epic$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Tasks/Epic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Tasks/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Tasks/Subtask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/Tasks/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/history/HistoryManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/history/InMemoryHistoryManager$CustomLinkedList$TaskNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/history/InMemoryHistoryManager$CustomLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/history/InMemoryHistoryManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/history/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/manager/InMemoryTaskManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/manager/Managers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/out/production/ТЗ4/manager/TaskManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/Tasks/Epic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/Tasks/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/Tasks/Subtask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/Tasks/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/history/HistoryManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/history/InMemoryHistoryManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/history/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/FileBackedTasksManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/InMemoryTaskManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/Managers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/TaskManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/exception/ManagerLoadFromFileException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ 6 ZIP/ТЗ 6/src/manager/exception/ManagerSaveException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ТЗ4" beforeDir="false" afterPath="$PROJECT_DIR$/../ТЗ4" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2NqIjNB509idU55NHq1AftTDC5f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ian/Desktop/JavaStudy/projects/dev/ТЗ 7&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c7140da-b08d-425e-a621-886d0257f97f" name="Changes" comment="" />
+      <created>1680385320983</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680385320983</updated>
+    </task>
+    <servers />
+  </component>
+</project>
