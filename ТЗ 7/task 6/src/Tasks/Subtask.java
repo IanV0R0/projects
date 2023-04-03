@@ -13,19 +13,19 @@ public class Subtask extends Task {
 
     @Override
     public String toCsvString() {
-        return id + ",SUBTASK," + title + "," + description + "," + status + "," + epicId + "," + duration + "," + startTime;
+        return getId() + ",SUBTASK," + getTitle() + "," + getDescription() + "," + status + "," + epicId + "," + getDuration() + "," + getStartTime();
     }
 
     @Override
     public String toString() {
         return "Tasks.Subtask{" +
                 "epicId=" + epicId +
-                ", id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
+                ", id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", status=" + status +
-                ", duration='" + duration + '\'' +
-                ", startTime='" + startTime + '\'' +
+                ", duration='" + getDuration() + '\'' +
+                ", startTime='" + getStartTime() + '\'' +
                 ", endTime='" + getEndTime() + '\'' +
                 '}';
     }

@@ -1,9 +1,10 @@
-package manager;
+package test.manager;
 
 import Tasks.Epic;
 import Tasks.Status;
 import Tasks.Subtask;
 import Tasks.Task;
+import manager.TaskManager;
 import manager.exception.TasksTimeIntersectionException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ abstract class TaskManagerTest<T extends TaskManager> {
 
         taskManager.save(task);
 
-        final Task savedTask = taskManager.getTaskById(task.id);
+        final Task savedTask = taskManager.getTaskById(task.getId());
         assertNotNull(savedTask);
         assertEquals(task, savedTask);
 
@@ -51,12 +52,12 @@ abstract class TaskManagerTest<T extends TaskManager> {
     @Test
     void saveEpic() {
         final Epic epic = new Epic(taskManager.nextId(), "Epic", "Epic Description");
-        final Subtask inProgressSubtask = new Subtask(taskManager.nextId(), epic.id, "In progress subtask", "Subtask description", Status.IN_PROGRESS, 500, startTime);
+        final Subtask inProgressSubtask = new Subtask(taskManager.nextId(), epic.getId(), "In progress subtask", "Subtask description", Status.IN_PROGRESS, 500, startTime);
         epic.addSubtask(inProgressSubtask);
 
         taskManager.save(epic);
 
-        final Epic savedEpic = taskManager.getEpicById(epic.id);
+        final Epic savedEpic = taskManager.getEpicById(epic.getId());
         assertNotNull(savedEpic);
         assertEquals(epic, savedEpic);
         assertEquals(epic.getStatus(), savedEpic.getStatus());
@@ -76,7 +77,7 @@ abstract class TaskManagerTest<T extends TaskManager> {
 
         taskManager.save(subtask);
 
-        final Subtask savedSubtask = taskManager.getSubtaskById(subtask.id);
+        final Subtask savedSubtask = taskManager.getSubtaskById(subtask.getId());
         assertNotNull(savedSubtask);
         assertEquals(subtask, savedSubtask);
 
@@ -91,9 +92,9 @@ abstract class TaskManagerTest<T extends TaskManager> {
         final Task task = new Task(taskManager.nextId(), "Task", "Task Description", Status.NEW, 500, startTime);
 
         taskManager.save(task);
-        taskManager.deleteTaskById(task.id);
+        taskManager.deleteTaskById(task.getId());
 
-        assertNull(taskManager.getTaskById(task.id));
+        assertNull(taskManager.getTaskById(task.getId()));
 
         final Collection<Task> savedTasks = taskManager.getAllTasks();
         assertNotNull(savedTasks);
@@ -104,14 +105,14 @@ abstract class TaskManagerTest<T extends TaskManager> {
     @Test
     void deleteEpicById() {
         final Epic epic = new Epic(taskManager.nextId(), "Epic", "Epic Description");
-        final Subtask inProgressSubtask = new Subtask(taskManager.nextId(), epic.id, "In progress subtask", "Subtask description", Status.IN_PROGRESS, 500, startTime);
+        final Subtask inProgressSubtask = new Subtask(taskManager.nextId(), epic.getId(), "In progress subtask", "Subtask description", Status.IN_PROGRESS, 500, startTime);
         epic.addSubtask(inProgressSubtask);
 
         taskManager.save(epic);
-        taskManager.deleteEpicById(epic.id);
+        taskManager.deleteEpicById(epic.getId());
 
-        assertNull(taskManager.getEpicById(epic.id));
-        assertNull(taskManager.getSubtaskById(inProgressSubtask.id));
+        assertNull(taskManager.getEpicById(epic.getId()));
+        assertNull(taskManager.getSubtaskById(inProgressSubtask.getId()));
 
         final Collection<Epic> savedEpics = taskManager.getAllEpics();
         assertNotNull(savedEpics);
@@ -125,9 +126,9 @@ abstract class TaskManagerTest<T extends TaskManager> {
         final Subtask subtask = new Subtask(taskManager.nextId(), fakeEpicId, "Subtask", "Test Subtask Description", Status.NEW, 500, startTime);
 
         taskManager.save(subtask);
-        taskManager.deleteSubtaskById(subtask.id);
+        taskManager.deleteSubtaskById(subtask.getId());
 
-        assertNull(taskManager.getSubtaskById(subtask.id));
+        assertNull(taskManager.getSubtaskById(subtask.getId()));
 
         final Collection<Subtask> savedSubtasks = taskManager.getAllSubtasks();
         assertNotNull(savedSubtasks);
@@ -154,8 +155,8 @@ abstract class TaskManagerTest<T extends TaskManager> {
         final Epic epic = new Epic(taskManager.nextId(), "Epic", "Epic Description");
         final Epic anotherEpic = new Epic(taskManager.nextId(), "Another Epic", "Another Epic Description");
         final Epic epicWithoutSubtasks = new Epic(taskManager.nextId(), "Epic Without Subtasks", "Epic Without Subtask Description");
-        final Subtask subtask = new Subtask(taskManager.nextId(), epic.id, "Subtask", "Test Subtask Description", Status.IN_PROGRESS, 500, startTime);
-        final Subtask anotherSubtask = new Subtask(taskManager.nextId(), anotherEpic.id, "Another Subtask", "Another Test Subtask Description", Status.DONE, 500, startTime);
+        final Subtask subtask = new Subtask(taskManager.nextId(), epic.getId(), "Subtask", "Test Subtask Description", Status.IN_PROGRESS, 500, startTime);
+        final Subtask anotherSubtask = new Subtask(taskManager.nextId(), anotherEpic.getId(), "Another Subtask", "Another Test Subtask Description", Status.DONE, 500, startTime);
         epic.addSubtask(subtask);
         anotherEpic.addSubtask(anotherSubtask);
 
@@ -189,16 +190,16 @@ abstract class TaskManagerTest<T extends TaskManager> {
     void getHistory() {
         final Task task = new Task(taskManager.nextId(), "Task", "Task Description", Status.NEW, 500, startTime);
         final Epic epic = new Epic(taskManager.nextId(), "Epic", "Epic Description");
-        final Subtask subtask = new Subtask(taskManager.nextId(), epic.id, "Subtask", "Test Subtask Description", Status.NEW, 500, startTime);
+        final Subtask subtask = new Subtask(taskManager.nextId(), epic.getId(), "Subtask", "Test Subtask Description", Status.NEW, 500, startTime);
         epic.addSubtask(subtask);
 
         taskManager.save(task);
         taskManager.save(epic);
         taskManager.save(subtask);
 
-        taskManager.getTaskById(task.id);
-        taskManager.getEpicById(epic.id);
-        taskManager.getSubtaskById(subtask.id);
+        taskManager.getTaskById(task.getId());
+        taskManager.getEpicById(epic.getId());
+        taskManager.getSubtaskById(subtask.getId());
 
         final List<Task> history = taskManager.getHistory();
         assertNotNull(history);

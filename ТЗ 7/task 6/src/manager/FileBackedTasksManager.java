@@ -41,19 +41,19 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
                     case "EPIC": {
                         Epic epic = new Epic(Integer.parseInt(fields[0]), fields[2], fields[3]);
                         manager.save(epic);
-                        taskIdToTask.put(epic.id, epic);
+                        taskIdToTask.put(epic.getId(), epic);
                         break;
                     }
                     case "TASK": {
                         Task task = new Task(Integer.parseInt(fields[0]), fields[2], fields[3], Status.valueOf(fields[4]), Integer.parseInt(fields[5]), LocalDateTime.parse(fields[6]));
                         manager.save(task);
-                        taskIdToTask.put(task.id, task);
+                        taskIdToTask.put(task.getId(), task);
                         break;
                     }
                     case "SUBTASK": {
                         Subtask subtask = new Subtask(Integer.parseInt(fields[0]), Integer.parseInt(fields[5]), fields[2], fields[3], Status.valueOf(fields[4]), Integer.parseInt(fields[5]), LocalDateTime.parse(fields[6]));
                         manager.save(subtask);
-                        taskIdToTask.put(subtask.id, subtask);
+                        taskIdToTask.put(subtask.getId(), subtask);
                         break;
                     }
                 }
@@ -83,7 +83,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager {
             }
             writer.println();
             String history = getHistory().stream()
-                    .map(task -> "" + task.id)
+                    .map(task -> "" + task.getId())
                     .collect(Collectors.joining(","));
             writer.println(history);
             writer.close();

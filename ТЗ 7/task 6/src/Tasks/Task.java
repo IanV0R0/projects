@@ -4,13 +4,15 @@ import java.time.LocalDateTime;
 
 public class Task {
 
-    public final int id;
-    public final String title;
-    public final String description;
+    private final int id;
+    private final String title;
+    private final String description;
     protected Status status;
 
-    public int duration;
-    public LocalDateTime startTime;
+    protected int duration;
+    protected LocalDateTime startTime;
+
+
 
     public Task(int id, String title, String description, Status status, int duration, LocalDateTime startTime) {
         this.id = id;
@@ -21,6 +23,26 @@ public class Task {
         this.startTime = startTime;
     }
 
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
     public String toCsvString() {
         return id + ",TASK," + title + "," + description + "," + status + "," + duration + "," + startTime;
     }

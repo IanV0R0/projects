@@ -14,13 +14,13 @@ public class InMemoryHistoryManager implements HistoryManager {
     @Override
     public void add(Task task) {
         if (task == null) return;
-        TaskNode presentElem = taskIdsToNode.get(task.id);
+        TaskNode presentElem = taskIdsToNode.get(task.getId());
         if (presentElem != null) {
             historyList.removeNode(presentElem);
         }
 
         TaskNode createdNode = historyList.linkLast(task);
-        taskIdsToNode.put(task.id, createdNode);
+        taskIdsToNode.put(task.getId(), createdNode);
     }
 
     @Override

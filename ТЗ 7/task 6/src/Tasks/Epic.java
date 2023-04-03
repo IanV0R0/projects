@@ -15,7 +15,7 @@ public class Epic extends Task {
     }
 
     public void addSubtask(Subtask subtask) {
-        this.subtaskMap.put(subtask.id, subtask);
+        this.subtaskMap.put(subtask.getId(), subtask);
         this.status = calculateStatus();
         this.duration = calculateDuration();
         this.startTime = calculateStartTime();
@@ -59,7 +59,7 @@ public class Epic extends Task {
         Collection<Subtask> subtasks = subtaskMap.values();
         int totalDuration = 0;
         for (Subtask subtask : subtasks) {
-            totalDuration += subtask.duration;
+            totalDuration += subtask.getDuration();
         }
         return totalDuration;
     }
@@ -69,7 +69,7 @@ public class Epic extends Task {
         if (subtasks.isEmpty()) return LocalDateTime.MAX;
         LocalDateTime result = LocalDateTime.MAX;
         for (Subtask subtask : subtasks) {
-            if (result.isAfter(subtask.startTime)) result = subtask.startTime;
+            if (result.isAfter(subtask.getStartTime())) result = subtask.getStartTime();
         }
         return result;
     }
@@ -91,20 +91,20 @@ public class Epic extends Task {
 
     @Override
     public String toCsvString() {
-        return id + ",EPIC," + title + "," + description;
+        return getId() + ",EPIC," + getTitle() + "," + getDescription();
     }
 
     @Override
     public String toString() {
         return "Tasks.Epic{" +
                 "subtaskMap=" + subtaskMap +
-                ", id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", status=" + status +
-                ", duration='" + duration + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
+                ", id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", status=" + getStatus() +
+                ", duration='" + getDuration() + '\'' +
+                ", startTime='" + getStartTime() + '\'' +
+                ", endTime='" + getEndTime() + '\'' +
                 '}';
     }
 }

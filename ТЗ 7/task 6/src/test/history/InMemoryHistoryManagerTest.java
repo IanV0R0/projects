@@ -1,7 +1,8 @@
-package history;
+package test.history;
 
 import Tasks.Status;
 import Tasks.Task;
+import history.HistoryManager;
 import manager.Managers;
 import manager.TaskManager;
 import org.junit.jupiter.api.BeforeAll;
@@ -69,7 +70,7 @@ class InMemoryHistoryManagerTest {
         final Task task = new Task(taskManager.nextId(), "Task", "Test task", Status.NEW, 60, startTime);
 
         historyManager.add(task);
-        historyManager.remove(task.id);
+        historyManager.remove(task.getId());
 
         final List<Task> historyList = historyManager.getHistory();
         assertNotNull(historyList);
@@ -86,7 +87,7 @@ class InMemoryHistoryManagerTest {
         historyManager.add(firstTask);
         historyManager.add(middleTask);
         historyManager.add(endTask);
-        historyManager.remove(firstTask.id);
+        historyManager.remove(firstTask.getId());
 
         final List<Task> historyList = historyManager.getHistory();
         assertNotNull(historyList);
@@ -103,7 +104,7 @@ class InMemoryHistoryManagerTest {
         historyManager.add(firstTask);
         historyManager.add(middleTask);
         historyManager.add(endTask);
-        historyManager.remove(middleTask.id);
+        historyManager.remove(middleTask.getId());
 
         final List<Task> historyList = historyManager.getHistory();
         assertNotNull(historyList);
@@ -120,7 +121,7 @@ class InMemoryHistoryManagerTest {
         historyManager.add(firstTask);
         historyManager.add(middleTask);
         historyManager.add(endTask);
-        historyManager.remove(endTask.id);
+        historyManager.remove(endTask.getId());
 
         final List<Task> historyList = historyManager.getHistory();
         assertNotNull(historyList);

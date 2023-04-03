@@ -1,6 +1,7 @@
-package manager;
+package test.manager;
 
 import Tasks.Epic;
+import manager.FileBackedTasksManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,7 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
 
         taskManager.save(epic);
 
-        final Epic savedEpic = taskManager.getEpicById(epic.id);
+        final Epic savedEpic = taskManager.getEpicById(epic.getId());
         assertNotNull(savedEpic);
     }
 }
