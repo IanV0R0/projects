@@ -145,8 +145,7 @@ public class InMemoryTaskManager implements TaskManager {
     private void validateTasksTimeIntersection(Task addedTask) {
         for (Task existing : prioritizedTasks) {
             if(addedTask.getStartTime().isAfter(existing.getStartTime()) &&
-                    addedTask.getEndTime().isBefore(existing.getEndTime()) &&
-                    addedTask.getEndTime().isAfter(existing.getStartTime()) &&
+                    addedTask.getStartTime().isBefore(existing.getEndTime()) || addedTask.getEndTime().isAfter(existing.getStartTime()) &&
                     addedTask.getEndTime().isBefore(existing.getEndTime()))
                 throw new TasksTimeIntersectionException();
         }
